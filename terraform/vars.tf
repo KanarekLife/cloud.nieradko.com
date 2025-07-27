@@ -22,3 +22,13 @@ variable "ssh_authorized_key" {
   type    = string
   default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIECNiO2jUclVP5/tJI+o0CAqAoJgoCH1AMsivi8cr9up stanislaw@nieradko.com"
 }
+
+variable "cloudflare_zone_id" {
+  type    = string
+  default = "173ac9823c319d366bde962355813636"
+}
+
+variable "cloudflare_api_token" {
+  type      = string
+  sensitive = true
+}
