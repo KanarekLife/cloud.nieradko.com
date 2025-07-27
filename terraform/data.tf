@@ -11,3 +11,8 @@ data "oci_core_images" "ubuntu" {
   sort_order               = "DESC"
   shape                    = "VM.Standard.A1.Flex"
 }
+
+data "oci_identity_fault_domains" "fault_domains" {
+  availability_domain = data.oci_identity_availability_domain.ad.name
+  compartment_id      = oci_identity_compartment.cloud-nieradko-com-compartment.id
+}

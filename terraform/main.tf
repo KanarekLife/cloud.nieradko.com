@@ -41,6 +41,7 @@ resource "oci_core_instance" "cloud-nieradko-com-instance" {
   count          = 2
 
   availability_domain = data.oci_identity_availability_domain.ad.name
+  fault_domain        = data.oci_identity_fault_domains.fault_domains.fault_domains[count.index % length(data.oci_identity_fault_domains.fault_domains.fault_domains)].name
   shape               = "VM.Standard.A1.Flex"
 
   shape_config {
