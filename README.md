@@ -17,3 +17,19 @@ $ cp terraform/examples/terraform.tfvars.example terraform/terraform.tfvars
 # Edit terraform/terraform.tfvars with your values
 $ terraform init
 ```
+
+## Ansible
+
+```sh
+$ cd ansible/
+
+# Make sure to comment out inside inventory.ini:
+#
+# [nodes:vars]
+# ansible_ssh_user=kanareklife
+#
+$ ansible-playbook create_user.yml -i inventory.ini
+# Restore commented out lines in inventory.ini
+
+$ ansible-playbook update.yml -i inventory.ini -K
+```
