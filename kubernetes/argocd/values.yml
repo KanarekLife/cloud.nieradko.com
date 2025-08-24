@@ -18,6 +18,7 @@ configs:
   cm:
     accounts.kanareklife: login
   rbac:
+    policy.default: role:user
     policy.csv: |
       p, role:user, applications, get, *, allow
       p, role:user, applications, sync, *, allow
@@ -25,4 +26,6 @@ configs:
       p, role:user, clusters, get, *, allow
       p, role:user, repositories, get, *, allow
       p, role:user, logs, get, *, allow
+      p, role:user, projects, get, *, allow
+      g, kanareklife, role:user
       g, admin, role:admin
