@@ -1,2 +1,4 @@
 crds:
   enabled: true
+
+featureGates: "ACMEHTTP01IngressPathTypeExact=false"
