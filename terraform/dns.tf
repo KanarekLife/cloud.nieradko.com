@@ -25,3 +25,11 @@ resource "cloudflare_dns_record" "cloud-nieradko-com-root-record" {
   ttl     = 1
   content = "k8s.nieradko.com"
 }
+
+resource "cloudflare_dns_record" "cloud-nieradko-com-argocd-record" {
+  name    = "argocd"
+  zone_id = var.cloudflare_zone_id
+  type    = "CNAME"
+  ttl     = 1
+  content = "k8s.nieradko.com"
+}

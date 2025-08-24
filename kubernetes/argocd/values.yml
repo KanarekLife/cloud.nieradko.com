@@ -1,0 +1,20 @@
+global:
+  domain: argocd.nieradko.com
+
+server:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+
+configs:
+  cm:
+    accounts.kanareklife: login
+  rbac:
+    policy.csv: |
+      p, role:user, applications, get, *, allow
+      p, role:user, applications, sync, *, allow
+      p, role:user, applicationsets, get, *, allow
+      p, role:user, clusters, get, *, allow
+      p, role:user, repositories, get, *, allow
+      p, role:user, logs, get, *, allow
+      g, admin, role:admin
