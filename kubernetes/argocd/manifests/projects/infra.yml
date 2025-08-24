@@ -8,6 +8,7 @@ spec:
     - https://github.com/KanarekLife/cloud.nieradko.com
     - https://charts.jetstack.io
     - https://argoproj.github.io/argo-helm
+    - https://charts.longhorn.io
   destinations:
     - namespace: "*"
       server: "*"
