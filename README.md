@@ -32,4 +32,10 @@ $ ansible-playbook create_user.yml -i inventory.ini
 # Restore commented out lines in inventory.ini
 
 $ ansible-playbook update.yml -i inventory.ini -K
+$ ansible-playbook configure-iptables.yml -i inventory.ini -K
+$ ansible-playbook configure-journalctl.yml -i inventory.ini -K
+$ ansible-playbook disable-multipathd.yml -i inventory.ini -K
+$ ansible-playbook increase-inotify-limit.yml -i inventory.ini -K
+$ ansible-playbook reboot.yml -i inventory.ini -K
+$ ansible-playbook setup_rke2.yml -i inventory.ini -K
 ```
